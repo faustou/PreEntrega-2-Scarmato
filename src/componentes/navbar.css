@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #D0B8A8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.menuEnlace{
+    margin-top: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #85586F;
+    text-align: center;
+    border-radius: 15px;
+    padding: 15px;
+    height: 60px;
+    background-color: #F8EDE3;
+}
+.headerLogo {
+    width: 60px;
+}
+.cart{
+    position: relative;
+    width: 50px;
+    margin-top: 2rem;
+}
+.cart img{
+    width: 50px;
+}
+.cart span{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 2px;
+    right: -7px;
+    text-align: center;
+    color: white;
+    background-color: red;
+    border-radius: 50%;
+}
+.logo a{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    text-decoration: none;
+    color: #85586F;
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: oblique;
+}
+.logo a p{
+    margin-top: 2rem;
+}
+.greeting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #DFD3C3;
+    height: 300px;
+    color: #85586F;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.bienvenida{
+    font-size: 2rem;
+    font-weight: 500;
+}
+@media screen and (max-width: 1400px) {
+    .menuEnlace{
+        margin-top: 1.2rem;
+        font-weight: 500;
+        text-decoration: none;
+        font-size: 1rem;
+        text-align: center;
+        border-radius: 15px;
+        padding: 15px;
+        height: 50px;
+
+    }
+}
+@media screen and (max-width: 1150px){
+    .menuEnlace{
+        font-size: 0.8rem;
+        height: 45px;
+    }
+    .logo a {
+        font-size: 1.5rem;
+        font-weight: 600;
+        gap: 0.2rem;
+    }
+    .headerLogo {
+        width: 50px;
+    }
+    .cart img{
+        width: 40px;
+    }
+    .cart span{
+        height: 18px;
+        width: 18px;
+    }
+    .navbar{
+        gap: 0.5rem;
+    }
+}
+@media screen and (max-width: 930px){
+    .menuEnlace{
+        font-size: 0.7rem;
+        height: 40px;
+    }
+    .logo a {
+        font-size: 1rem;
+        font-weight: 500;
+        gap: 0.2rem;
+    }
+    .logo a p{
+        margin-top: 1.8rem;
+    }
+    .headerLogo {
+        width: 35px;
+    }
+    header {
+        height: 80px;
+    }
+    .menuEnlace{
+        margin-top: 0rem;
+    }
+}
+@media screen and (max-width: 700px){
+    header{
+        height: 250px;
+    }
+    .navbar{
+        flex-direction: column;
+        gap: 0.4rem;
+        margin-top: 1rem;
+    }
+    .menuEnlace{
+        width: 170px;
+    }
+}
