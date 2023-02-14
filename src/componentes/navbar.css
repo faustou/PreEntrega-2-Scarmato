@@ -7,18 +7,21 @@ header {
     display: flex;
     justify-content: space-around;
     background-color: #D0B8A8;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .navbar {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
+.active {
+    background-color: #85586F!important;
+    color: #D0B8A8!important;
+}
 .menuEnlace{
     margin-top: 1rem;
     font-weight: 500;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 0.8rem;
     color: #85586F;
     text-align: center;
     border-radius: 15px;
@@ -59,33 +62,78 @@ header {
     font-style: oblique;
 }
 .logo a p{
-    margin-top: 2rem;
+    margin-top: 2.8rem;
 }
 .greeting{
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
     background-color: #DFD3C3;
     height: 300px;
     color: #85586F;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .bienvenida{
     font-size: 2rem;
     font-weight: 500;
 }
+
+/* Header con boostrap */
+.header {
+    background-color: #D0B8A8!important;
+    gap: 1rem;
+}
+.offcanvas-body, .offcanvas-header {
+    background-color: #D0B8A8!important;
+    justify-content: space-around;
+
+}
+.offcanvas.show {
+    background-color: #D0B8A8;
+}
+.cart img {
+    margin-left: 1rem;
+}
+
+.liHeader {
+    margin-left: 1rem;
+}
+.flex-grow-1 {
+    flex-grow: none;
+    margin-bottom: 1rem!important;
+}
+.offcanvas-body {
+    align-items: center;
+}
+.pe-3 {
+    margin-bottom: 1rem!important;
+}
+.detalleProducto p{
+    height: 9rem;
+    font-size: 1.2rem;
+    text-align: start;
+    margin-left: 1rem;
+}
+.nav-link {
+    color: #FFF;
+}
+/* final del Header con boostrap */
+
 @media screen and (max-width: 1400px) {
     .menuEnlace{
         margin-top: 1.2rem;
         font-weight: 500;
         text-decoration: none;
-        font-size: 1rem;
+        font-size: 0.6rem;
         text-align: center;
         border-radius: 15px;
         padding: 15px;
         height: 50px;
-
+    }
+    .infoD {
+        flex-direction: column!important;
+    }
+    .infoD img {
+        width: 300px!important;
     }
 }
 @media screen and (max-width: 1150px){
@@ -134,6 +182,11 @@ header {
     .menuEnlace{
         margin-top: 0rem;
     }
+    .contenedorFooter {
+        flex-direction: column;
+        gap: 0px!important;
+
+    }
 }
 @media screen and (max-width: 700px){
     header{
@@ -142,9 +195,278 @@ header {
     .navbar{
         flex-direction: column;
         gap: 0.4rem;
-        margin-top: 1rem;
     }
     .menuEnlace{
         width: 170px;
     }
+    .enlaces a{
+        font-size: 12px;
+    }
+    .enlaces {
+        margin: 0px 1rem 0px 1rem;
+    }
+    .by h2 {
+        font-size: 10px!important;
+    }
+    .logoFooter a img {
+        height: 25px!important;
+    }
+    .nombreBrandFooter {
+        font-size: 13px!important;
+        margin-top: 1rem!important;
+    }
+}
+@media screen and (max-width: 500px){
+    .enlaces{
+        gap: 1rem!important;
+    }
+}
+main {
+    min-height: 80vh;
+    margin: 20px;
+}
+
+.item-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.item {
+    position: relative;
+    width: 320px;
+    margin: 40px 22px 16px 22px;
+    border-radius: 8px;
+    padding: 6px;
+    transition: all 0.2s ease-in-out;
+}
+.container-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+.info-price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+.info-price h5 {
+ font-size: 1.4rem;
+ font-style: italic;
+}
+.dosBotones {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+.input {
+    height: 35px;
+    width: 90px;
+    text-align: center;
+}
+
+.infoD {
+    margin: 2rem;
+    display: flex;
+    margin-top: 2rem;
+    gap: 3rem;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+.infoD img {
+    border: rgb(187, 184, 184) 1px solid;
+    width: 600px;
+    border-radius: 15px;
+}
+.infoCompra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.descripcion {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin: 1rem;
+    border-top: rgb(187, 184, 184) 1px solid;
+}
+.descripcion p {
+    align-items: flex-start;
+}
+.nav-tabs {
+    --bs-nav-link-color: rgb(0, 0, 0)!important;
+    --bs-nav-link-hover-color: rgb(0, 0, 0)!important;
+}
+p {
+    margin-bottom: 0rem!important;
+}
+/* BOTON DE COMPRAR */
+
+.btn-5,
+.btn-5 *,
+.btn-5 :after,
+.btn-5 :before,
+.btn-5:after,
+.btn-5:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-5 {
+    width: 170px;
+    height: 50px;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+}
+.btn-5:disabled {
+  cursor: default;
+}
+.btn-5:-moz-focusring {
+  outline: auto;
+}
+.btn-5 svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn-5 [hidden] {
+  display: none;
+}
+.btn-5 {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  position: relative;
+}
+.btn-5 span {
+  mix-blend-mode: difference;
+}
+.btn-5:before {
+  --tilt: 1.2rem;
+  background: rgb(10, 136, 20);
+  -webkit-clip-path: polygon(
+    0 0,
+    calc(100% - var(--tilt)) 0,
+    100% 50%,
+    calc(100% - var(--tilt)) 100%,
+    0 100%
+  );
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--tilt)) 0,
+    100% 50%,
+    calc(100% - var(--tilt)) 100%,
+    0 100%
+  );
+  content: "";
+  display: block;
+  height: 100%;
+  left: calc(-100% - var(--tilt));
+  position: absolute;
+  top: 0;
+  transform: translateX(var(--progress, 0));
+  transition: transform 0.2s ease;
+  width: calc(100% + var(--tilt));
+}
+.btn-5:hover:before {
+  --progress: 100%;
+}
+
+/* FIN DEL BOTON*/
+
+/* footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #DFD3C3;
+}
+.redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.redes a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D0B8A8;
+    width: 35px;
+    height: 35px;
+    border-radius: 25px;
+    margin-top: 1rem;
+}
+.enlaces {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 1rem;
+    height: 70px;
+}
+.enlaces a {
+    text-decoration: none;
+    color: #000;
+}
+.by h2{
+    font-size: 1rem;
+    font-style: oblique;
+    font-weight: 700;
+    margin-top: 0.3rem;
+}
+.by h2 a{
+    text-decoration: none;
+    color: aqua;
+}
+.by {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #D0B8A8;
+    height: 60px;
+}
+.by img {
+    height: 50px;
+}
+.contenedorFooter {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3rem;
+}
+.logoFooter a img {
+    height: 40px;
+}
+.logoFooter a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    text-decoration: none;
+}
+.nombreBrandFooter {
+    color: #85586F;
+    margin-top: 1.4rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-style: oblique;
+    
 }
