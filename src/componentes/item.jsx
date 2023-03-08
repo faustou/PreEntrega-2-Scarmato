@@ -10,6 +10,7 @@ const Item = ({ producto }) => {
                     <h2>{producto.title}</h2>
                     <div className="info-price">
                         <h5>${producto.price}.-</h5>
+                        <h2>hasda</h2>
                     </div>
                 </article>
             </div>
