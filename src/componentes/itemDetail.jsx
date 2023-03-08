@@ -1,10 +1,9 @@
-import React from 'react';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import { Link } from 'react-router-dom';
 import ItemDetailCount from './ItemDetailCount';
 
 const ItemDetail = ({ item }) => {
+
     return (
         <div className="itemDetail">
             <article className="infoD">
@@ -15,7 +14,7 @@ const ItemDetail = ({ item }) => {
                         <h5>${item.price}.-</h5>
                     </div>
                     <div className='dosBotonesD'>
-                        <ItemDetailCount className="input" />
+                        <ItemDetailCount className="input" item={item} />
                     </div>
                     <hr />
                     <div className='descripcion'>

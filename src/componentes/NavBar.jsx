@@ -14,7 +14,7 @@ function Header(){
     return (
         <>
           {['xl'].map((expand) => (
-            <Navbar key={expand} expand={expand} className="mb-3 header">
+            <Navbar key={expand} expand={expand} className="header">
               <Container fluid className='containerHeader'>
                 <div className="logo">
                     <a href='/'>
@@ -36,9 +36,9 @@ function Header(){
                   <Offcanvas.Body>
                     <Nav className="justify-content-center pe-3 header liHeader">
                         <NavLink to='/' className='menuEnlace'> INICIO </NavLink>
-                        <NavLink to='/rem-ind' className='menuEnlace'> REMEDIO INDIVIDUAL </NavLink>
-                        <NavLink to='/got-per' className='menuEnlace'> CONJUNTO DE REMEDIOS </NavLink>
-                        <NavLink to='/caj-bac' className='menuEnlace'> CAJAS DE REMEDIOS </NavLink>
+                        <NavLink to='/remedio-individual' className='menuEnlace'> REMEDIO INDIVIDUAL </NavLink>
+                        <NavLink to='/gotero-personalizado' className='menuEnlace'> CONJUNTO DE REMEDIOS </NavLink>
+                        <NavLink to='/caja-completa' className='menuEnlace'> CAJAS DE REMEDIOS </NavLink>
                         <NavLink to='/contacto' className='menuEnlace'> CONTACTO </NavLink>
                     </Nav>
                     <Form className="d-flex">
@@ -51,7 +51,9 @@ function Header(){
                       <Button variant="outline-success">Buscar</Button>
                     </Form>
                     <div>
-                <Link to='/cart'> <CartWidget /> </Link>
+                <Link to='/cart'>
+                  <CartWidget /> 
+                </Link>
             </div>
                   </Offcanvas.Body>
                 </Navbar.Offcanvas>

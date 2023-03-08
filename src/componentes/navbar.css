@@ -227,6 +227,7 @@ main {
 }
 
 .item-list {
+    background-color: #85586F;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -235,6 +236,7 @@ main {
 }
 
 .item {
+    background-color: #ffff;
     position: relative;
     width: 320px;
     margin: 40px 22px 16px 22px;
@@ -243,8 +245,14 @@ main {
     transition: all 0.2s ease-in-out;
 }
 .container-items {
+    background-color: #85586F;
     display: flex;
     flex-wrap: wrap;
+}
+.info h2{
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 .info-price{
     display: flex;
@@ -254,11 +262,16 @@ main {
 }
 .info-price h5 {
  font-size: 1.4rem;
+ font-weight: 700;
+ white-space: nowrap;
+ color: #85586F;
  font-style: italic;
+ text-align: left;
+ margin-left: 2.2rem;
 }
 .dosBotones {
     display: flex;
-    align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     margin-top: 1rem;
 }
@@ -316,11 +329,11 @@ p {
   box-sizing: border-box;
 }
 .btn-5 {
-    width: 170px;
+    width: 145px;
     height: 50px;
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
-  background-color: #000;
+  background-color: #D0B8A8;
   background-image: none;
   color: #fff;
   cursor: pointer;
@@ -359,7 +372,7 @@ p {
 }
 .btn-5:before {
   --tilt: 1.2rem;
-  background: rgb(10, 136, 20);
+  background: #85586F;
   -webkit-clip-path: polygon(
     0 0,
     calc(100% - var(--tilt)) 0,
