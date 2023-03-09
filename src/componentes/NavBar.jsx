@@ -9,6 +9,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { NavDropdown } from 'react-bootstrap';
 
 function Header(){
     return (
@@ -36,7 +37,31 @@ function Header(){
                   <Offcanvas.Body>
                     <Nav className="justify-content-center pe-3 header liHeader">
                         <NavLink to='/' className='menuEnlace'> INICIO </NavLink>
-                        <NavLink to='/remedio-individual' className='menuEnlace'> REMEDIO INDIVIDUAL </NavLink>
+                        <Link className='menuEnlace'> 
+                          <NavDropdown title="REMEDIO INDIVIDUAL" id="basic-nav-dropdown"> 
+                            <NavDropdown.Item>
+                              <Link to='/group-1' style={{ TextDecoder: 'none' }}> Temor, miedo y preocupación </Link>
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                              <Link to='/group-2'> Incertidumbre e inseguridad </Link>
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                              <Link to='/group-3'> Falta de interés por el presente </Link>
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                              <Link to='/group-4'> Soledad </Link>
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                              <Link to='/group-5'> Hipersensibilidad </Link>
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                              <Link to='/group-6'> Desesperación, desánimo y abatimiento </Link>
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                              <Link to='/group-7'> Sufrimiento y preocupación por los demás </Link>
+                            </NavDropdown.Item>
+                          </NavDropdown>
+                        </Link>
                         <NavLink to='/gotero-personalizado' className='menuEnlace'> CONJUNTO DE REMEDIOS </NavLink>
                         <NavLink to='/caja-completa' className='menuEnlace'> CAJAS DE REMEDIOS </NavLink>
                         <NavLink to='/contacto' className='menuEnlace'> CONTACTO </NavLink>

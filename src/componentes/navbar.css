@@ -26,11 +26,14 @@ header {
     text-align: center;
     border-radius: 15px;
     padding: 15px;
-    height: 60px;
     background-color: #F8EDE3;
 }
 .headerLogo {
     width: 60px;
+}
+a{
+    text-decoration: none!important;
+    color: #85586F!important;
 }
 .cart{
     position: relative;
@@ -42,10 +45,10 @@ header {
 }
 .cart span{
     position: absolute;
-    height: 20px;
-    width: 20px;
-    top: 2px;
-    right: -7px;
+    height: 22px;
+    width: 22px;
+    top: 4px;
+    right: -23px;
     text-align: center;
     color: white;
     background-color: red;
@@ -368,7 +371,7 @@ p {
   position: relative;
 }
 .btn-5 span {
-  mix-blend-mode: difference;
+  mix-blend-mode: color-dodge;
 }
 .btn-5:before {
   --tilt: 1.2rem;
