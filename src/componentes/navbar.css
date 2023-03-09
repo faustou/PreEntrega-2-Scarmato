@@ -28,6 +28,20 @@ header {
     padding: 15px;
     background-color: #F8EDE3;
 }
+.menuEnlaceDrop{
+    margin-top: 2rem;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #85586F;
+    text-align: center;
+    border-radius: 15px;
+    padding: 7px;
+    background-color: #F8EDE3;
+}
+.menu{
+    margin-top: 2rem;
+}
 .headerLogo {
     width: 60px;
 }
@@ -51,7 +65,7 @@ a{
     right: -23px;
     text-align: center;
     color: white;
-    background-color: red;
+    background-color: #85586F;
     border-radius: 50%;
 }
 .logo a{
@@ -124,13 +138,14 @@ a{
 @media screen and (max-width: 1400px) {
     .menuEnlace{
         margin-top: 1.2rem;
-        font-weight: 500;
         text-decoration: none;
-        font-size: 0.6rem;
-        text-align: center;
-        border-radius: 15px;
-        padding: 15px;
-        height: 50px;
+        font-size: 0.8rem;
+    }
+    .menuEnlaceDrop{
+        margin-top: 1.2rem;
+
+        text-decoration: none;
+        font-size: 0.8rem;
     }
     .infoD {
         flex-direction: column!important;

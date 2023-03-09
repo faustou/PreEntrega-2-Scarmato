@@ -36,11 +36,11 @@ function Header(){
                   </Offcanvas.Header>
                   <Offcanvas.Body>
                     <Nav className="justify-content-center pe-3 header liHeader">
-                        <NavLink to='/' className='menuEnlace'> INICIO </NavLink>
-                        <Link className='menuEnlace'> 
-                          <NavDropdown title="REMEDIO INDIVIDUAL" id="basic-nav-dropdown"> 
+                        <NavLink to='/' className='menuEnlace menu'> INICIO </NavLink>
+                        <Link> 
+                          <NavDropdown title="REMEDIO INDIVIDUAL" id="basic-nav-dropdown" className='menuEnlaceDrop'> 
                             <NavDropdown.Item>
-                              <Link to='/group-1' style={{ TextDecoder: 'none' }}> Temor, miedo y preocupación </Link>
+                              <Link to='/group-1'> Temor, miedo y preocupación </Link>
                             </NavDropdown.Item>
                             <NavDropdown.Item>
                               <Link to='/group-2'> Incertidumbre e inseguridad </Link>
@@ -62,9 +62,9 @@ function Header(){
                             </NavDropdown.Item>
                           </NavDropdown>
                         </Link>
-                        <NavLink to='/gotero-personalizado' className='menuEnlace'> CONJUNTO DE REMEDIOS </NavLink>
-                        <NavLink to='/caja-completa' className='menuEnlace'> CAJAS DE REMEDIOS </NavLink>
-                        <NavLink to='/contacto' className='menuEnlace'> CONTACTO </NavLink>
+                        <NavLink to='/gotero-personalizado' className='menuEnlace menu'> CONJUNTO DE REMEDIOS </NavLink>
+                        <NavLink to='/caja-completa' className='menuEnlace menu'> CAJAS DE REMEDIOS </NavLink>
+                        <NavLink to='/contacto' className='menuEnlace menu'> CONTACTO </NavLink>
                     </Nav>
                     <Form className="d-flex">
                       <Form.Control
