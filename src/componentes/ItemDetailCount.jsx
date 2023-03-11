@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { useCartContext } from "../context/CartContext"
 import AfterBuy from "./afterBuy"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ItemDetailCount = ({ initial= 1, stock=10, onAdd, item={item}}) => {
     
@@ -8,11 +10,15 @@ const ItemDetailCount = ({ initial= 1, stock=10, onAdd, item={item}}) => {
     const [count, setCount] = useState(initial)
     const { addCart, cartList } = useCartContext()
 
+    //toastify
+    const notifyAdd = () => toast.success("Agregaste producto Exitosamente.");
+
     function onAdd(cantidad) {
         console.log(cantidad)
         addCart({...item, cantidad })
         console.log('cart List:',cartList)
         setFinisProcess(false)
+        notifyAdd()
     }
 
     const sumar = ()=> {
@@ -52,7 +58,21 @@ const ItemDetailCount = ({ initial= 1, stock=10, onAdd, item={item}}) => {
                     </div>
 
                 :
-                <AfterBuy />
+                <>
+                    <AfterBuy />
+                    <ToastContainer
+                        position="bottom-right"
+                        autoClose={4000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="colored"
+                    />
+                </>
 
             }
 

@@ -30,6 +30,9 @@ Iniciar la aplicación / Start the application
 $ npm run dev
 ```
 
+## DEPLOY 
+#### https://eloquent-malasada-519599.netlify.app
+
 ## TECHNOLOGIES
 
 Las tecnologías que utilice para realizar este proyecto, fueron:

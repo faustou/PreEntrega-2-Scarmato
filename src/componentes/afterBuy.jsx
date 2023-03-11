@@ -1,4 +1,5 @@
 import React from 'react';
+import { ShoppingCartOutlined } from '@ant-design/icons';
 import { Link } from "react-router-dom"
 
 const AfterBuy = () => {
@@ -7,7 +8,7 @@ const AfterBuy = () => {
             <Link to='/cart'>
                 <button className="btn-5 m-2">
                     <span>
-                        Ir a cart
+                        Ir a cart <ShoppingCartOutlined style={{ fontSize: '20px', color: '#fff' }} />
                     </span>
                 </button>
             </Link>
