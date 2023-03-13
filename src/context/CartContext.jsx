@@ -21,6 +21,7 @@ export const CartContextProvider = ({children})=> {
             item
         ])
         console.log('cart List:',cartList)
+        setPrueba(true)
     }
     const totalAmount = () => cartList.reduce( (count, product) => count += product.cantidad, 0)
     const totalPrice = () => cartList.reduce( (count, item) => count += (item.cantidad*item.price), 0)
@@ -29,10 +30,13 @@ export const CartContextProvider = ({children})=> {
     }
 
     const deleteItem = (id) => setCartList(cartList.filter(prod => prod.id !== id))
+
+    const [prueba, setPrueba] = useState(false);
     return (
 
         <CartContext.Provider value={{
             cartList,
+            prueba,
             addCart,
             deleteItem,
             emptyCart,

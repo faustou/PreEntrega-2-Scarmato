@@ -20,6 +20,8 @@ const Form = () => {
     //toastify
     const notifyOrder = () => toast.success("Orden Generada, Felicidades!");
 
+    const notifyErrorEmail = () => toast.error("Las direcciones de mail no coinciden.");
+
     const handleOnChange = (event) => {
         setDataForm({
             ...dataForm,
@@ -37,7 +39,7 @@ const Form = () => {
         const db = getFirestore()
         const queryCollection = collection(db, 'Orders')
 
-        dataForm.email !== dataForm.validateEmail ? console.log('error no coinciden') : 
+        dataForm.email !== dataForm.validateEmail ? notifyErrorEmail() : 
         addDoc(queryCollection, order)
         .then(resp => setIdOrder(resp))
         .catch(err => console.log(err))
@@ -64,7 +66,7 @@ const Form = () => {
                         <input 
                             type="text" 
                             name='name' 
-                            placeholder='ingresar nombre' 
+                            placeholder='Nombre completo' 
                             className='form-control'
                             onChange={handleOnChange}
                             value={dataForm.name} 
@@ -73,7 +75,7 @@ const Form = () => {
                         <input 
                             type="text" 
                             name='phone' 
-                            placeholder='ingresar celular' 
+                            placeholder='Celular/Telefono' 
                             className='form-control'
                             onChange={handleOnChange}
                             value={dataForm.phone} 
@@ -82,7 +84,7 @@ const Form = () => {
                         <input 
                             type="text" 
                             name='email' 
-                            placeholder='ingresar email' 
+                            placeholder='Correo electronico' 
                             className='form-control'
                             onChange={handleOnChange}
                             value={dataForm.email} 
@@ -91,7 +93,7 @@ const Form = () => {
                         <input 
                             type="text" 
                             name='validateEmail' 
-                            placeholder='repeti tu email' 
+                            placeholder='Repetí tu correo electronico' 
                             className='form-control'
                             onChange={handleOnChange}
                             value={dataForm.validateEmail} 
@@ -101,6 +103,18 @@ const Form = () => {
                             Generar Orden
                         </button>
                     </form>
+                    <ToastContainer
+                            position="bottom-right"
+                            autoClose={4000}
+                            hideProgressBar={false}
+                            newestOnTop={false}
+                            closeOnClick
+                            rtl={false}
+                            pauseOnFocusLoss
+                            draggable
+                            pauseOnHover
+                            theme="colored"
+                        />
                 </div>
                 :
                     <>

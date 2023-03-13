@@ -29,7 +29,7 @@ const ItemDetail = ({ item }) => {
                     <p>Frasco de cristal de 20 ml con gotero.</p>
                     </Tab>
                     <Tab eventKey="profile" title="Como usar" className='detalleProducto'>
-                    <p>PREPARADO SIMPLE: Diluya 2 gotas en un vaso de agua y beba a sorbos y a intervalos. O bien añada 2 gotas en un frasco cuentagotas de 30 ml. con agua y toma 4 gotas, al menos 4 veces al día. PREPARADO COMPUESTO: Añada 2 gotas de cada flor (máximo 7 flores) en un gotero de 30 ml. y tómelo como está indicado arriba.</p>
+                    <p>PREPARADO SIMPLE: Diluya 2 gotas en un vaso de agua y beba a sorbos y a intervalos. O bien añada 2 gotas en un frasco cuentagotas de 30 ml. con agua y toma 4 gotas, al menos 4 veces al día.</p>
                 </Tab>
             </Tabs>
         </div>
