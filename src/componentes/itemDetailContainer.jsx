@@ -25,25 +25,6 @@ const ItemDetailContainer = () => {
     }, [])
     console.log(item)
     
-
-    // useEffect(() => {
-    //     const getProduct = () =>{
-    //         return new Promise ((res, rej) =>{
-    //             const prod = products.find((prod) => prod.id === Number(id));
-    //             setTimeout(() => {
-    //                 res(prod);
-    //                 console.log(prod)
-    //             }, 500)
-    //         })
-    //     }
-    //     getProduct().then((res)=>{
-    //         setItem(res)
-    //     })
-    //     .catch((error) =>{
-    //         console.log(error)
-    //     })
-    //     .finally(()=> setLoading(false))
-    // }, [id])
     
     return (
         <>

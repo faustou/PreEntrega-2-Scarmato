@@ -1,4 +1,5 @@
 import Tab from 'react-bootstrap/Tab';
+import './itemDetail.scss'
 import Tabs from 'react-bootstrap/Tabs';
 import ItemDetailCount from './ItemDetailCount';
 

@@ -2,14 +2,13 @@ import './navbar.css';
 import Logo from '../assets/img/aceite-esencial.png'
 import CartWidget from './cartWidget';
 import {NavLink, Link} from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavDropdown } from 'react-bootstrap';
+import Searcher from './searcher';
 
 function Header(){
     return (
@@ -66,15 +65,7 @@ function Header(){
                         <NavLink to='/caja-completa' className='menuEnlace menu'> CAJAS DE REMEDIOS </NavLink>
                         <NavLink to='/contacto' className='menuEnlace menu'> CONTACTO </NavLink>
                     </Nav>
-                    <Form className="d-flex">
-                      <Form.Control
-                        type="search"
-                        placeholder="Buscar"
-                        className="me-2"
-                        aria-label="Search"
-                      />
-                      <Button variant="outline-success">Buscar</Button>
-                    </Form>
+                    <Searcher />
                     <div>
                 <Link to='/cart'>
                   <CartWidget /> 

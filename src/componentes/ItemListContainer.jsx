@@ -18,7 +18,7 @@ const ItemListContainer = () => {
         const queryFilter =  categoryName ? query(queryCollection, where('category', '==' ,categoryName || 'groupCategory', '==' ,categoryName)) : queryCollection ;
 
         getDocs(queryFilter)
-        .then(respCollection => setItems( respCollection.docs.map(prod => ({ id: prod.id, ...prod.data() })) )) 
+        .then(respCollection => setItems( respCollection.docs.map(prod => ({ id: prod.id, ...prod.data() })) ))
         .catch(err => console.log(err))
         .finally(() => setLoading(false))
     }, [categoryName])

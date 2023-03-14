@@ -1,4 +1,9 @@
-.imgGroup{
+@import '../scss/variables';
+
+.item {
+    background-color: $secondary-color;
+}
+.imgGroup {
     height: 20%;
     position: absolute;
     right: -28px;

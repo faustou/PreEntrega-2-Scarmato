@@ -4,18 +4,21 @@ import { CloseSquareFilled } from '@ant-design/icons';
 import { useCartContext } from '../context/CartContext';
 import NoProduct from './NoProduct';
 import Form from './form.jsx';
+import { Link } from 'react-router-dom';
 
 const CartContainer = () => {
     const { cartList, emptyCart, totalPrice, deleteItem, prueba } = useCartContext()
     return (
-        <div>
+        <div className='cart-main-container'>
             {
                 prueba==true ?
                 <div className='container item-cart-container'>
                 {
                     cartList.map(prodCart => (
-                        <div key={prodCart.id} className='d-flex flex-row align-items-center'>
-                            <img src={prodCart.img} style= {{ width: '65px' }} />
+                        <div key={prodCart.id} className='d-flex align-items-center justify-content-center p-2 item-container'>
+                            <div>
+                                <img src={prodCart.img} style= {{ width: '75px' }} />
+                            </div>
                             <div>
                                 <p className='item-title'>
                                     {prodCart.name}
@@ -36,13 +39,27 @@ const CartContainer = () => {
                             </div>
                         </div>
                     ))
-                }
-                <h2 className='text-end' >Precio total: ${totalPrice()} </h2>   
-                <button className='btn btn-primary mb-4' onClick={emptyCart}>
-                     Vaciar el carrito
-                </button>
-
-                <Form />
+                }       
+                        <div>
+                            <h2 className='text-end price-total' >PRECIO TOTAL: ${totalPrice()} </h2>   
+                        </div>
+                        <div className='button-container'>
+                            <button className='btn-5' onClick={emptyCart}>
+                                <span>
+                                    Vaciar el carrito
+                                </span>
+                            </button>
+                            <Link to='/'>
+                                <button className='btn-5'>
+                                    <span>
+                                        Volver al menu
+                                    </span>
+                                </button>
+                            </Link>
+                        </div>
+                        <div>
+                            <Form />
+                        </div>
                 </div>
 
                 :

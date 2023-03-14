@@ -3,6 +3,7 @@ import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { useCartContext } from '../context/CartContext';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './form.scss'
 import TrackingCode from './trackingCode.jsx';
 
 const Form = () => {
@@ -56,7 +57,7 @@ const Form = () => {
         })
     }
     return (
-        <div>
+        <div className='form-main-container'>
             {
                 giveId==false ?
 
@@ -99,8 +100,10 @@ const Form = () => {
                             value={dataForm.validateEmail} 
                             required
                         />
-                        <button className='btn btn-primary mb-4'>
-                            Generar Orden
+                        <button className='btn-5'>
+                            <span>
+                                Generar Orden
+                            </span>
                         </button>
                     </form>
                     <ToastContainer
